@@ -1,0 +1,42 @@
+{
+  "name": "eii/laravel-captcha",
+  "description": "A configurable Laravel CAPTCHA layer for Cloudflare Turnstile and Google reCAPTCHA.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.2",
+    "illuminate/contracts": "^11.0 || ^12.0 || ^13.0",
+    "illuminate/http": "^11.0 || ^12.0 || ^13.0",
+    "illuminate/support": "^11.0 || ^12.0 || ^13.0",
+    "illuminate/validation": "^11.0 || ^12.0 || ^13.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0 || ^10.0 || ^11.0",
+    "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Eii\\Captcha\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Eii\\Captcha\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Eii\\Captcha\\CaptchaServiceProvider"
+      ],
+      "aliases": {
+        "EiiCaptcha": "Eii\\Captcha\\Facades\\Captcha"
+      }
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
